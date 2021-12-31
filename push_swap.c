@@ -6,7 +6,7 @@
 /*   By: baubigna <baubigna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/31 16:10:22 by baubigna          #+#    #+#             */
-/*   Updated: 2021/12/31 18:33:14 by baubigna         ###   ########.fr       */
+/*   Updated: 2021/12/31 19:26:00 by baubigna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,8 +110,5 @@ int	main(int ac, char **av)
 	replace_nb(s_a, s_s, l);
 	convert_stack(s_a, l);
 	algo(s_a, s_b, l);
-	int i = 0;
-	while (i < l)
-		printf("%ld\n", s_a[i++]);
 	return (0);
 }

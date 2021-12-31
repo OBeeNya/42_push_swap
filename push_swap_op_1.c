@@ -6,7 +6,7 @@
 /*   By: baubigna <baubigna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 18:46:43 by baubigna          #+#    #+#             */
-/*   Updated: 2021/12/30 17:19:07 by baubigna         ###   ########.fr       */
+/*   Updated: 2021/12/31 19:18:42 by baubigna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,8 @@ void	op_pa(long int *stack_b, long int *stack_a, int stack_len)
 		j++;
 	while (stack_b[i] == BLANK)
 		i++;
-//	if (stack_b[i] != '\0')
-//	{
-		stack_a[j - 1] = stack_b[i];
-		stack_b[i] = BLANK;
-//	}
+	stack_a[j - 1] = stack_b[i];
+	stack_b[i] = BLANK;
 	write(1, "pa\n", 3);
 }
 
@@ -95,10 +92,7 @@ void	op_pb(long int *stack_a, long int *stack_b, int stack_len)
 		j++;
 	while (stack_a[i] == BLANK)
 		i++;
-//	if (stack_a[i] != '\0')
-//	{
-		stack_b[j - 1] = stack_a[i];
-		stack_a[i] = BLANK;
-//	}
+	stack_b[j - 1] = stack_a[i];
+	stack_a[i] = BLANK;
 	write(1, "pb\n", 3);
 }

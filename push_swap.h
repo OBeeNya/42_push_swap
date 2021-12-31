@@ -6,7 +6,7 @@
 /*   By: baubigna <baubigna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/31 16:33:59 by baubigna          #+#    #+#             */
-/*   Updated: 2021/12/31 18:36:02 by baubigna         ###   ########.fr       */
+/*   Updated: 2021/12/31 19:26:36 by baubigna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void		convert_stack(long int *s_a, int l);
 int			is_stack_empty(long int *s, int l);
 void		algo(long int *s_a, long int *s_b, int l);
 int			get_max_len(long int *s, int l);
+long int	get_first_elem(long int *s);
 
 void		op_sa(long int *stack, int stack_len);
 void		op_sb(long int *stack, int stack_len);
