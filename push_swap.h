@@ -6,7 +6,7 @@
 /*   By: baubigna <baubigna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/31 16:33:59 by baubigna          #+#    #+#             */
-/*   Updated: 2022/01/07 15:11:48 by baubigna         ###   ########.fr       */
+/*   Updated: 2022/01/07 15:15:49 by baubigna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ long int	get_first_elem(long int *s);
 int			is_stack_sorted(long int *s_a, int l);
 void		sort_three(long int *s_a, int l);
 void		sort_five(long int *s_a, long int *s_b, int l);
-void		dispatch_cases(long int *s_a, long int *s_b, char **av, int l);
+void		dispatch(long int *s_a, long int *s_b, long int *s_s, int l);
 
 void		op_sa(long int *stack, int stack_len);
 void		op_sb(long int *stack, int stack_len);
