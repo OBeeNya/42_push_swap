@@ -6,7 +6,7 @@
 /*   By: baubigna <baubigna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/31 16:10:22 by baubigna          #+#    #+#             */
-/*   Updated: 2022/01/07 15:14:56 by baubigna         ###   ########.fr       */
+/*   Updated: 2022/01/07 15:16:15 by baubigna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,7 @@ int	main(int ac, char **av)
 	s_s = malloc(sizeof(long int) * (l + 1));
 	if (!s_a || !s_b || !s_s)
 		return (0);
-	dispatch(s_a, s_b, s_s, av, l);
+	prep_stacks(s_a, s_b, l, av);
+	dispatch(s_a, s_b, s_s, l);
 	return (0);
 }
