@@ -6,7 +6,7 @@
 /*   By: baubigna <baubigna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/31 16:10:22 by baubigna          #+#    #+#             */
-/*   Updated: 2021/12/31 19:26:00 by baubigna         ###   ########.fr       */
+/*   Updated: 2022/01/07 15:09:34 by baubigna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,11 @@ int	main(int ac, char **av)
 	sort_stack(s_s, l);
 	replace_nb(s_a, s_s, l);
 	convert_stack(s_a, l);
-	algo(s_a, s_b, l);
+	if (l == 3)
+		sort_three(s_a, l);
+	else if (l == 5)
+		sort_five(s_a, s_b, l);
+	else
+		algo(s_a, s_b, l);
 	return (0);
 }
