@@ -6,7 +6,7 @@
 /*   By: baubigna <baubigna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 14:13:52 by baubigna          #+#    #+#             */
-/*   Updated: 2022/01/07 15:09:48 by baubigna         ###   ########.fr       */
+/*   Updated: 2022/01/07 15:13:45 by baubigna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,19 @@ void	sort_five(long int *s_a, long int *s_b, int l)
 		op_sb(s_b, l);
 	op_pa(s_b, s_a, l);
 	op_pa(s_b, s_a, l);
+}
+
+void	dispatch_cases(long int *s_a, long int *s_b, char **av, int l)
+{
+	prep_stacks(s_a, s_b, l, av);
+	copy_stack(s_a, s_s, l);
+	sort_stack(s_s, l);
+	replace_nb(s_a, s_s, l);
+	convert_stack(s_a, l);
+	if (l == 3)
+		sort_three(s_a, l);
+	else if (l == 5)
+		sort_five(s_a, s_b, l);
+	else
+		algo(s_a, s_b, l);
 }
