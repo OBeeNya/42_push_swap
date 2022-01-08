@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baubigna <baubigna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: benjamin <benjamin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/31 16:10:22 by baubigna          #+#    #+#             */
-/*   Updated: 2022/01/07 15:16:15 by baubigna         ###   ########.fr       */
+/*   Updated: 2022/01/08 14:59:25 by baubigna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,14 @@ int	check_args(char **av)
 
 int	check_int(char **av)
 {
-	while (*av)
+	int	i;
+
+	i = 1;
+	while (av[i])
 	{
-		if (ft_atol(*av) < -2147483648 || ft_atol(*av) > 2147483647)
+		if (ft_atol(av[i]) < -2147483648 || ft_atol(av[i]) > 2147483647)
 			return (0);
-		av++;
+		i++;
 	}
 	return (1);
 }
@@ -105,6 +108,8 @@ int	main(int ac, char **av)
 	if (!s_a || !s_b || !s_s)
 		return (0);
 	prep_stacks(s_a, s_b, l, av);
-	dispatch(s_a, s_b, s_s, l);
+	if (!is_stack_sorted(s_a, l))
+		dispatch(s_a, s_b, s_s, l);
+	free_stacks(s_a, s_b, s_s);
 	return (0);
 }

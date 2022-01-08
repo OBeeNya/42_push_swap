@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_utils_3.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baubigna <baubigna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: benjamin <benjamin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 14:13:52 by baubigna          #+#    #+#             */
-/*   Updated: 2022/01/07 15:15:43 by baubigna         ###   ########.fr       */
+/*   Updated: 2022/01/07 18:52:18 by benjamin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,20 @@ void	sort_three(long int *s_a, int l)
 		op_rra(s_a, l);
 }
 
+void	sort_threes(long int *s_a, int l)
+{
+	if ((get_first_elem(s_a) == 10 && get_scd_elem(s_a) == 100)
+		|| (get_first_elem(s_a) == 11 && get_scd_elem(s_a) == 100))
+		op_rra(s_a, l);
+	if ((get_first_elem(s_a) == 11 && get_scd_elem(s_a) == 10)
+		|| (get_first_elem(s_a) == 100 && get_scd_elem(s_a) == 11))
+		op_sa(s_a, l);
+	if (get_first_elem(s_a) == 100 && get_scd_elem(s_a) == 10)
+		op_ra(s_a, l);
+	if (get_first_elem(s_a) == 11)
+		op_rra(s_a, l);
+}
+
 void	sort_five(long int *s_a, long int *s_b, int l)
 {
 	int	i;
@@ -53,7 +67,7 @@ void	sort_five(long int *s_a, long int *s_b, int l)
 			op_ra(s_a, l);
 		i++;
 	}
-	sort_three(s_a, l);
+	sort_threes(s_a, l);
 	if (get_first_elem(s_b) == 0)
 		op_sb(s_b, l);
 	op_pa(s_b, s_a, l);
